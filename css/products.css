@@ -155,3 +155,11 @@
     background-color: #ccc;
     cursor: not-allowed;
 }
+.no-inventory-msg {
+    grid-column: 1/-1;
+    text-align: center;
+}
+
+.pointer-cursor {
+    cursor: pointer;
+}

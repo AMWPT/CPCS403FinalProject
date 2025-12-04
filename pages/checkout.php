@@ -116,9 +116,9 @@ include '../includes/header.php';
         <table class="summary-table">
             <thead>
                 <tr>
-                    <th style="text-align: left;">Product</th>
-                    <th style="text-align: right;">Qty</th>
-                    <th style="text-align: right;">Subtotal</th>
+                    <th class="align-left">Product</th>
+                    <th class="align-right">Qty</th>
+                    <th class="align-right">Subtotal</th>
                 </tr>
             </thead>
             <tbody>
@@ -133,14 +133,14 @@ include '../includes/header.php';
                     $display_total += $sub;
                     echo "<tr>
                             <td>" . htmlspecialchars($row['name']) . "</td>
-                            <td style='text-align: right;'>$qty</td>
-                            <td style='text-align: right;'>$" . number_format($sub, 2) . "</td>
+                            <td class='align-right'>$qty</td>
+                            <td class='align-right'>$" . number_format($sub, 2) . "</td>
                           </tr>";
                 }
                 ?>
                 <tr class="total-row">
                     <td colspan="2">Total</td>
-                    <td style="text-align: right;">
+                    <td class="align-right">
                         <span id="final-total" data-base-total="<?php echo $display_total; ?>">
                             $<?php echo number_format($display_total, 2); ?>
                         </span>
@@ -204,7 +204,7 @@ include '../includes/header.php';
                 <option value="12">12 Months (5% Interest)</option>
                 <option value="24">24 Months (10% Interest)</option>
             </select>
-            <p style="font-size: 0.85rem; color: #666; margin-top: 5px;">
+            <p class="financing-note">
                 * Total amount will be adjusted based on the interest rate.
             </p>
         </div>

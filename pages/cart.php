@@ -95,7 +95,7 @@ include '../includes/header.php';
                     }
                     ?>
                     <tr class="total-row">
-                        <td colspan="3" style="text-align: right;">Grand Total:</td>
+                        <td colspan="3" class="align-right-bold">Grand Total:</td>
                         <td colspan="2">$<?php echo number_format($total, 2); ?></td>
                     </tr>
                 </tbody>

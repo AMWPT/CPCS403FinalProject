@@ -71,7 +71,7 @@ include '../includes/db.php'; // Required to fetch featured products
                 </div>';
             }
         } else {
-            echo '<p style="text-align:center; width:100%;">No featured products available at the moment.</p>';
+              echo '<p class="no-products-msg">No featured products available at the moment.</p>';
         }
         ?>
     </div>

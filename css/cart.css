@@ -124,3 +124,7 @@
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
 }
+.align-right-bold {
+    text-align: right;
+    font-weight: bold;
+}

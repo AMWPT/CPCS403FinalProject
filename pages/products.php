@@ -34,11 +34,11 @@ $result = $conn->query($sql);
                         <span class="badge badge-category">'.$row['category_name'].'</span>
                         '.($isOutOfStock ? '<span class="badge badge-out">Sold Out</span>' : '').'
                         
+                        
                         <img src="'.$img.'" 
-                             alt="'.htmlspecialchars($row['name']).'" 
-                             class="lightbox-trigger" 
-                             style="cursor: pointer;"
-                             title="Click to zoom">
+                            alt="'.htmlspecialchars($row['name']).'" 
+                            class="lightbox-trigger pointer-cursor" 
+                            title="Click to zoom">
                     </div>
                     
                     <div class="product-details">
@@ -69,7 +69,7 @@ $result = $conn->query($sql);
                 </div>';
             }
         } else {
-            echo '<p style="grid-column: 1/-1; text-align: center;">No products found in the inventory.</p>';
+            echo '<p class="no-inventory-msg">No products found in the inventory.</p>';
         }
         ?>
     </div>

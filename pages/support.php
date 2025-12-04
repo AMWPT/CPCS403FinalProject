@@ -1,7 +1,7 @@
 <?php
 // pages/support.php
 include '../includes/header.php';
-include '../includes/db.php'; 
+include '../includes/db.php';
 
 $message = "";
 
@@ -18,8 +18,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $priority = isset($_POST['priority']) ? "Urgent" : "Normal";
     $callback = isset($_POST['callback']) ? "Yes" : "No";
 
-    // --- DATABASE LOGIC
-    // Requirement: Check if email already exists
+    
+   
     $check_sql = "SELECT * FROM support_tickets WHERE email = '$email'";
     $result = $conn->query($check_sql);
 
@@ -37,8 +37,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
     
-    
-    
+
+
     $message = "<div class='success-msg'>Ticket submitted successfully!</div>";
 }
 ?>
@@ -92,7 +92,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
 
             <div class="form-group">
-                <label style="display:block; margin-bottom:8px;">Warranty Status: *</label>
+                <label class="block-label">Warranty Status: *</label>
                 <input type="radio" id="under_warranty" name="issue_type" value="Warranty">
                 <label for="under_warranty">Under Warranty</label>
                 
@@ -101,7 +101,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
 
             <div class="form-group">
-                <label style="display:block; margin-bottom:8px;">Preferences:</label>
+                <label class="block-label">Preferences:</label>
                 <input type="checkbox" id="priority" name="priority" value="Urgent">
                 <label for="priority">Mark as Urgent Priority</label>
                 <br>

@@ -181,3 +181,16 @@
         grid-template-columns: 1fr; /* Stack vertically on small screens */
     }
 }
+.align-left {
+    text-align: left;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.financing-note {
+    font-size: 0.85rem; 
+    color: #666; 
+    margin-top: 5px;
+}
